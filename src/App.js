@@ -1,18 +1,26 @@
 import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {Home} from "./Pages/Home/Home";
+import HomeScreen from "./Pages/Home/HomeScreen";
 import {Login} from "./Pages/Login/Login";
 import {Store} from "./Pages/Store/Store";
+import Error from "./Pages/Error/Error";
+import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path="Store" element={<Store/>} />
-        <Route path="Login" element={<Login/>} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      
+      <BrowserRouter>
+      <Navbar/>
+        <Routes>
+          <Route path='/' element={<HomeScreen/>} />
+          <Route path="Store" element={<Store/>} />
+          <Route path="Login" element={<Login/>} />
+          <Route path="*" element={<Error/>}  />
+        </Routes>
+      </BrowserRouter>
+    </div>
+    
   );
 }
 
