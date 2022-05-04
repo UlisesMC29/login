@@ -5,6 +5,7 @@ import {Login} from "./Pages/Login/Login";
 import {Store} from "./Pages/Store/Store";
 import Error from "./Pages/Error/Error";
 import Navbar from "./components/navbar/Navbar";
+import { Register } from './Pages/Register/Register';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route path='/' element={<HomeScreen/>} />
           <Route path="Store" element={<Store/>} />
           <Route path="Login" element={<Login/>} />
-          <Route path="*" element={<Error/>}  />
+          <Route path="*" element={<Error />} />
+          <Route path='/register' element={<Register/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

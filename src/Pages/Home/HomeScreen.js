@@ -10,6 +10,7 @@ import './HomeScreen.css'
 export default function HomeScreen() {
   return (
     <div>
+      
         <div className='sectionCont'>
             <p className='title'>Zapatos</p>
             <SectionCard/>
