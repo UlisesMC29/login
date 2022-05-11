@@ -18,7 +18,7 @@ function App() {
           <Route path="Store" element={<Store/>} />
           <Route path="Login" element={<Login/>} />
           <Route path="*" element={<Error />} />
-          <Route path='/register' element={<Register/>}></Route>
+          <Route path='Register' element={<Register/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

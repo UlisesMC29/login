@@ -19,8 +19,8 @@ export const Register = () => {
                     <label>Password</label>
                     <input type="text" placeholder="*******" />
                 </div>
-                <button>Register</button>
-                <p>Al ready member? <Link to='/Login' style={{ textDecoration: 'none' }}><a>Login</a></Link> </p>
+                <Link to="/Login" style={{ textDecoration: 'none' }}><button >Register</button></Link>
+                <p>Already member? <Link to='/Login' style={{ textDecoration: 'none' }}><a>Login</a></Link> </p>
             </div>
         </div>
     );

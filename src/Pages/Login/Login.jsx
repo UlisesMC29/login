@@ -19,7 +19,7 @@ export const Login = () => {
                 <label>Password</label>
                 <input type="password" name="" id="" placeholder="*****" />
             </div>
-            <button >Login</button>
+            <Link to="/" style={{ textDecoration: 'none' }}><button >Login</button></Link>
             <div className="fnText-container">
                 <p>Not register yet? <Link to='/Register' style={{ textDecoration: 'none' }}><a>Register</a></Link> </p>
             </div>
