@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+// import { useLocation } from "wouter";
+import { useNavigate } from 'react-router-dom';
 // import Navbar from "../../components/navbar/Navbar";
 import "../Login/Login.css";
 
@@ -11,9 +13,12 @@ export const Login = () => {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [error, setError] = useState(null)
+    // const [location, navigate] = useLocation()
+    const navigate = useNavigate()
 
     const procesarDatos = (e) => {
         e.preventDefault()
+        //-----------Validación---------------
         if (!email.trim()) {
             // console.log('Ingrese el email')
             setError('Ingresar un email para continuar')
@@ -27,6 +32,11 @@ export const Login = () => {
         }
 
         setError(null)
+        // -----------PRUEBA----------
+        // alert(`${email}, ${pass}`);
+        // console.log(location)
+        navigate('/')
+
     }
 
     return (
